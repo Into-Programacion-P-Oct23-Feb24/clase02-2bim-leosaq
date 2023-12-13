@@ -9,7 +9,7 @@ package paquete1;
  *
  * @author reroes
  */
-public class Ejemplo04 {
+public class Ejemplo041 {
 
     /**
      * @param args the command line arguments
@@ -20,15 +20,22 @@ public class Ejemplo04 {
         // arreglo de tipo entero
         //int[] arreglo1 = new int[5];
         int[] arreglo1 = {1000, 1, 2, 2000, 300};
+        String acumulador = "";
+        int suma = 0 ;
         // System.out.println(arreglo1.length);
         //arreglo1[2] = 1000; 
         for (int i = 0; i < arreglo1.length; i++) {
-            //la palabra length cuando lo agrego para limitar un elemento me 
-            //da directamente el numero de elementos asociados sin tener yo que 
-            //agregar el limite del arreglo manualmente 
-            System.out.printf("Subíndice o Índice %d, con valor %d\n",
-                    i, arreglo1[i]);
+            
+            suma = suma + arreglo1[i] ;
+            
+            acumulador = String.format("%sSubíndice o Índice %d, con valor"
+                    + " %d\n", acumulador, i, arreglo1[i]);
         }
+        acumulador = acumulador.toUpperCase();
+        acumulador=String.format("%s\nLa suma total es:%s\n"
+                , acumulador ,suma) ;
+        
+        System.out.printf("%s\n" , acumulador) ;
 
     }
 
